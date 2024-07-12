@@ -63,19 +63,28 @@
     <div style="left: 876px; top: 513px; position: absolute; text-align: center; color: black; font-size: 24px; font-family: Montserrat; font-weight: 800; text-transform: uppercase; word-wrap: break-word">CERTIFICATION</div>
     <div style="left: 1245px; top: 513px; position: absolute; text-align: center; color: black; font-size: 24px; font-family: Montserrat; font-weight: 800; text-transform: uppercase; word-wrap: break-word">60 DAYS</div>
 </div>
- <script>
+<script>
         document.getElementById('developerForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const formData = new FormData(this);
-            fetch('https://example.com/form-handler', {
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            fetch('YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL', {
                 method: 'POST',
-                body: formData
-            }).then(response => {
-                if (response.ok) {
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then(response => response.json()).then(data => {
+                if (data.result === 'success') {
                     alert('Form submitted successfully!');
                 } else {
-                    alert('Failed to submit form.');
+                    alert('Failed to submit form: ' + data.error);
                 }
+            }).catch(error => {
+                alert('Failed to submit form: ' + error);
             });
         });
     </script>
