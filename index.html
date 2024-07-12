@@ -63,3 +63,19 @@
     <div style="left: 876px; top: 513px; position: absolute; text-align: center; color: black; font-size: 24px; font-family: Montserrat; font-weight: 800; text-transform: uppercase; word-wrap: break-word">CERTIFICATION</div>
     <div style="left: 1245px; top: 513px; position: absolute; text-align: center; color: black; font-size: 24px; font-family: Montserrat; font-weight: 800; text-transform: uppercase; word-wrap: break-word">60 DAYS</div>
 </div>
+ <script>
+        document.getElementById('developerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            fetch('https://example.com/form-handler', {
+                method: 'POST',
+                body: formData
+            }).then(response => {
+                if (response.ok) {
+                    alert('Form submitted successfully!');
+                } else {
+                    alert('Failed to submit form.');
+                }
+            });
+        });
+    </script>
