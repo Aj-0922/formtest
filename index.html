@@ -1,215 +1,200 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>Full Stack Developer</title>
-<style>
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f2f2f2;
-}
+  <title>Full Stack Developer Application</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
 
-.container {
-  max-width: 600px;
-  margin: 50px auto;
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+    .container {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 500px;
+    }
 
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-}
+    h1 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-.logo img {
-  width: 100px;
-}
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
 
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
+    .logo {
+      width: 150px;
+      height: auto;
+    }
 
-.title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+    .info {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 30px;
+    }
 
-}
+    .info-item {
+      text-align: center;
+    }
 
-.title span {
-  font-weight: bold;
-}
+    .info-item h2 {
+      margin-bottom: 5px;
+    }
 
-.form-group {
-    // BECOME A
-color: black;
- font-size: 32px;
- font-family: Montserrat;
- font-weight: 400;
- letter-spacing: 43.20px;
- word-wrap: break-word
----
-// FULL STACK DEVELOPER
-color: #016696;
- font-size: 96px;
- font-family: Montserrat;
- font-style: italic;
- font-weight: 900;
- word-wrap: break-word
----
-// 1 v 1 Training
-color: black;
- font-size: 24px;
- font-family: Montserrat;
- font-weight: 800;
- text-transform: uppercase;
- word-wrap: break-word
----
-// HANDS ON PROJECTS
-color: black;
- font-size: 24px;
- font-family: Montserrat;
- font-weight: 800;
- text-transform: uppercase;
- word-wrap: break-word
----
-// CERTIFICATION
-color: black;
- font-size: 24px;
- font-family: Montserrat;
- font-weight: 800;
- text-transform: uppercase;
- word-wrap: break-word
----
-// 60 DAYS
-color: black;
- font-size: 24px;
- font-family: Montserrat;
- font-weight: 800;
- text-transform: uppercase;
- word-wrap: break-word
-  margin-bottom: 20px;
-}
+    .form-group {
+      margin-bottom: 20px;
+    }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-}
+    .form-label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  box-sizing: border-box;
-}
+    .form-input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
 
-.proficiency-level {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
+    .form-checkbox {
+      display: inline-block;
+      margin-right: 10px;
+    }
 
-.proficiency-level label {
-  display: inline-block;
-  margin-right: 10px;
-}
+    .form-checkbox label {
+      font-weight: normal;
+    }
 
-.proficiency-level input[type="checkbox"] {
-  margin-right: 5px;
-}
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
 
-.buttons {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+    .button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
 
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 3px;
-  background-color: #4CAF50;
-  color: #fff;
-  cursor: pointer;
-}
+    .cancel {
+      background-color: #ccc;
+      color: #333;
+    }
 
-button:hover {
-  background-color: #45a049;
-}
+    .submit {
+      background-color: #2196F3;
+      color: #fff;
+    }
 
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-</style>
+    .info-item h2 {
+      font-size: 1.2em;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .info-item p {
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-  <div class="logo">
-    <img src="zenyze_logo.png" alt="Zenyze Logo">
+  <div class="container">
+    <h1>FULL STACK DEVELOPER</h1>
+
+    <div class="header">
+      <img class="logo" src="zenyze-logo.png" alt="Zenyze Logo">
+      <p>SOLUTIONS SIMPLIFIED</p>
+    </div>
+
+    <div class="info">
+      <div class="info-item">
+        <h2>1V1 TRAINING</h2>
+        <p>Get personalized guidance from experienced developers.</p>
+      </div>
+      <div class="info-item">
+        <h2>HANDS ON PROJECTS</h2>
+        <p>Build real-world projects to enhance your skills.</p>
+      </div>
+      <div class="info-item">
+        <h2>CERTIFICATION</h2>
+        <p>Earn a recognized certification to validate your expertise.</p>
+      </div>
+      <div class="info-item">
+        <h2>60 DAYS</h2>
+        <p>Complete the program in just 60 days.</p>
+      </div>
+    </div>
+
+    <form>
+      <div class="form-group">
+        <label class="form-label" for="name">Name</label>
+        <input class="form-input" type="text" id="name" name="name" placeholder="Your Full Name">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="email">Email</label>
+        <input class="form-input" type="email" id="email" name="email" placeholder="Your Email Address">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="phone">Phone Number</label>
+        <input class="form-input" type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="university">University/College</label>
+        <input class="form-input" type="text" id="university" name="university" placeholder="Your University/College Name">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="degree">Degree Program/Field of Study</label>
+        <input class="form-input" type="text" id="degree" name="degree" placeholder="Your Degree Program/Field of Study">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="languages">Programming Languages Known</label>
+        <input class="form-input" type="text" id="languages" name="languages" placeholder="List of Programming Languages">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Proficiency Level in Each Programming Language</label>
+        <div class="form-checkbox">
+          <input type="checkbox" id="beginner" name="proficiency" value="Beginner">
+          <label for="beginner">Beginner</label>
+        </div>
+        <div class="form-checkbox">
+          <input type="checkbox" id="intermediate" name="proficiency" value="Intermediate">
+          <label for="intermediate">Intermediate</label>
+        </div>
+        <div class="form-checkbox">
+          <input type="checkbox" id="advanced" name="proficiency" value="Advanced">
+          <label for="advanced">Advanced</label>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="button cancel" type="button">CANCEL</button>
+        <button class="button submit" type="submit">SUBMIT</button>
+      </div>
+    </form>
   </div>
-  <div class="title">
-     </div>
-  <form>
-    <div class="form-group">
-    <div style="left: 1095px; top: 69px; position: absolute"><span style="color: #1E1E1E; font-size: 24px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">SOLUTIONS</span><span style="color: black; font-size: 24px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"> </span><span style="color: #0096CA; font-size: 24px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">SIMPLIFIED</span></div>
-    <div style="width: 561px; height: 40px; left: 439px; top: 349px; position: absolute; text-align: center; color: black; font-size: 32px; font-family: Montserrat; font-weight: 400; letter-spacing: 43.20px; word-wrap: break-word">BECOME A</div>
-    <div style="width: 1294px; height: 107px; left: 73px; top: 392px; position: absolute; text-align: center; color: #016696; font-size: 96px; font-family: Montserrat; font-style: italic; font-weight: 900; word-wrap: break-word">FULL STACK DEVELOPER</div>
-    <div style="left: 77px; top: 513px; position: absolute; text-align: center; color: black; font-size: 24px; font-family: Montserrat; font-weight: 800; text-transform: uppercase; word-wrap: break-word">1 v 1 Training</div>
-    <div style="left: 424px; top: 513px; position: absolute; text-align: center; color: black; font-size: 24px; font-family: Montserrat; font-weight: 800; text-transform: uppercase; word-wrap: break-word">HANDS ON PROJECTS</div>
-    <div style="left: 876px; top: 513px; position: absolute; text-align: center; color: black; font-size: 24px; font-family: Montserrat; font-weight: 800; text-transform: uppercase; word-wrap: break-word">CERTIFICATION</div>
-    <div style="left: 1245px; top: 513px; position: absolute; text-align: center; color: black; font-size: 24px; font-family: Montserrat; font-weight: 800; text-transform: uppercase; word-wrap: break-word">60 DAYS</div>
- 
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required>
-    </div>
-    <div class="form-group">
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-    </div>
-    <div class="form-group">
-      <label for="university">University/College</label>
-      <input type="text" id="university" name="university" placeholder="Enter your university/college" required>
-    </div>
-    <div class="form-group">
-      <label for="degree">Degree Program/Field of Study</label>
-      <input type="text" id="degree" name="degree" placeholder="Enter your degree program/field of study" required>
-    </div>
-    <div class="form-group">
-      <label for="languages">Programming Languages Known</label>
-      <textarea id="languages" name="languages" placeholder="Enter programming languages you know" required></textarea>
-    </div>
-    <div class="proficiency-level">
-      <label>
-        <input type="checkbox" name="proficiency" value="Beginner"> Beginner
-      </label>
-      <label>
-        <input type="checkbox" name="proficiency" value="Intermediate"> Intermediate
-      </label>
-      <label>
-        <input type="checkbox" name="proficiency" value="Advanced"> Advanced
-      </label>
-    </div>
-    <div class="buttons">
-      <button type="button" onclick="window.location.href='index.html'">CANCEL</button>
-      <button type="submit" onclick="window.location.href='success.html'">SUBMIT</button>
-    </div>
-  </form>
-</div>
 </body>
 </html>
