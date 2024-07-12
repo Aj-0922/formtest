@@ -1,166 +1,165 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Full Stack Developer</title>
 <style>
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #f2f2f2;
 }
 
 .container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 600px;
+  margin: 50px auto;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.header {
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  width: 100px;
+}
+
+h1 {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.header h1 {
-  margin: 0;
-  font-size: 2.5em;
-  color: #333;
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.header p {
-  font-size: 1.2em;
-  color: #666;
+.title span {
+  font-weight: bold;
 }
 
 .form-group {
   margin-bottom: 20px;
 }
 
-.form-group label {
+label {
   display: block;
   margin-bottom: 5px;
-  font-weight: bold;
-  color: #333;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="tel"],
-.form-group textarea {
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
   box-sizing: border-box;
 }
 
-.form-group textarea {
-  resize: vertical;
+.proficiency-level {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.form-group .checkbox {
+.proficiency-level label {
   display: inline-block;
   margin-right: 10px;
 }
 
-.form-group .checkbox input[type="checkbox"] {
+.proficiency-level input[type="checkbox"] {
   margin-right: 5px;
 }
 
 .buttons {
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.buttons button {
+button {
   padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 3px;
+  background-color: #4CAF50;
+  color: #fff;
   cursor: pointer;
 }
 
-.buttons button:hover {
-  background-color: #0069d9;
+button:hover {
+  background-color: #45a049;
 }
 
-.buttons button:disabled {
-  opacity: 0.5;
-  cursor: default;
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 </style>
 </head>
 <body>
-
 <div class="container">
-  <div class="header">
-    <h1>ZENYZE</h1>
-    <h1>BECOME A</h1>
-    <h1>FULL STACK DEVELOPER</h1>
-    <p>1 V1 TRAINING - HANDS ON PROJECTS - CERTIFICATION - 60 DAYS</p>
+  <div class="logo">
+    <img src="zenyze_logo.png" alt="Zenyze Logo">
   </div>
-
+  <h1>Become a Full Stack Developer</h1>
+  <div class="title">
+    <span>1v1 Training</span>
+    <span>Hands On Projects</span>
+    <span>Certification</span>
+    <span>60 Days</span>
+  </div>
   <form>
     <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
     </div>
-
     <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
     </div>
-
     <div class="form-group">
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" required>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
     </div>
-
     <div class="form-group">
-      <label for="university">University/College:</label>
-      <input type="text" id="university" name="university" required>
+      <label for="university">University/College</label>
+      <input type="text" id="university" name="university" placeholder="Enter your university/college" required>
     </div>
-
     <div class="form-group">
-      <label for="program">Degree Program/Field of Study:</label>
-      <input type="text" id="program" name="program" required>
+      <label for="degree">Degree Program/Field of Study</label>
+      <input type="text" id="degree" name="degree" placeholder="Enter your degree program/field of study" required>
     </div>
-
     <div class="form-group">
-      <label for="languages">Programming Languages Known:</label>
-      <textarea id="languages" name="languages" required></textarea>
+      <label for="languages">Programming Languages Known</label>
+      <textarea id="languages" name="languages" placeholder="Enter programming languages you know" required></textarea>
     </div>
-
-    <div class="form-group">
-      <label for="proficiency">Proficiency Level in Each Programming Language:</label>
-      <div class="checkbox">
-        <input type="checkbox" id="beginner" name="proficiency" value="Beginner">
-        <label for="beginner">Beginner</label>
-      </div>
-      <div class="checkbox">
-        <input type="checkbox" id="intermediate" name="proficiency" value="Intermediate">
-        <label for="intermediate">Intermediate</label>
-      </div>
-      <div class="checkbox">
-        <input type="checkbox" id="advanced" name="proficiency" value="Advanced">
-        <label for="advanced">Advanced</label>
-      </div>
+    <div class="proficiency-level">
+      <label>
+        <input type="checkbox" name="proficiency" value="Beginner"> Beginner
+      </label>
+      <label>
+        <input type="checkbox" name="proficiency" value="Intermediate"> Intermediate
+      </label>
+      <label>
+        <input type="checkbox" name="proficiency" value="Advanced"> Advanced
+      </label>
     </div>
-
     <div class="buttons">
-      <button type="button" onclick="cancelForm()">CANCEL</button>
-      <button type="submit">SUBMIT</button>
+      <button type="button" onclick="window.location.href='index.html'">CANCEL</button>
+      <button type="submit" onclick="window.location.href='success.html'">SUBMIT</button>
     </div>
   </form>
-
-  <script>
-  function cancelForm() {
-    alert("Form cancelled!");
-  }
-  </script>
-
 </div>
-
 </body>
 </html>
