@@ -1,49 +1,138 @@
-<div style="width: 100%; height: 100%; position: relative; background: white">
-    <!-- Header and logo styles -->
-    
-    <!-- Form container -->
-    <div style="width: 1265px; left: 88px; top: 783px; position: absolute; background: #D9D9D9; border-radius: 5px; padding: 20px;">
-        <!-- Form -->
-        <form action="submit-your-form-handler-url" method="POST">
-            <div style="margin-bottom: 20px;">
-                <label for="name" style="font-size: 24px; font-family: Montserrat; font-weight: 500; color: black;">Name</label>
-                <input type="text" id="name" name="name" style="width: 600px; height: 35px; font-size: 18px; border: 1px solid #D9D9D9; border-radius: 5px; padding: 5px;">
-            </div>
-            <div style="margin-bottom: 20px;">
-                <label for="email" style="font-size: 24px; font-family: Montserrat; font-weight: 500; color: black;">Email</label>
-                <input type="email" id="email" name="email" style="width: 600px; height: 35px; font-size: 18px; border: 1px solid #D9D9D9; border-radius: 5px; padding: 5px;">
-            </div>
-            <div style="margin-bottom: 20px;">
-                <label for="phone" style="font-size: 24px; font-family: Montserrat; font-weight: 500; color: black;">Phone Number</label>
-                <input type="tel" id="phone" name="phone" style="width: 600px; height: 35px; font-size: 18px; border: 1px solid #D9D9D9; border-radius: 5px; padding: 5px;">
-            </div>
-            <div style="margin-bottom: 20px;">
-                <label for="university" style="font-size: 24px; font-family: Montserrat; font-weight: 500; color: black;">University/College</label>
-                <input type="text" id="university" name="university" style="width: 600px; height: 35px; font-size: 18px; border: 1px solid #D9D9D9; border-radius: 5px; padding: 5px;">
-            </div>
-            <div style="margin-bottom: 20px;">
-                <label for="degree" style="font-size: 24px; font-family: Montserrat; font-weight: 500; color: black;">Degree Program/Field of Study</label>
-                <input type="text" id="degree" name="degree" style="width: 600px; height: 35px; font-size: 18px; border: 1px solid #D9D9D9; border-radius: 5px; padding: 5px;">
-            </div>
-            <div style="margin-bottom: 20px;">
-                <label for="languages" style="font-size: 24px; font-family: Montserrat; font-weight: 500; color: black;">Programming Languages Known</label>
-                <input type="text" id="languages" name="languages" style="width: 600px; height: 35px; font-size: 18px; border: 1px solid #D9D9D9; border-radius: 5px; padding: 5px;">
-            </div>
-            <div style="margin-bottom: 20px;">
-                <label for="proficiency" style="font-size: 24px; font-family: Montserrat; font-weight: 500; color: black;">Proficiency Level</label>
-                <select id="proficiency" name="proficiency" style="width: 200px; height: 35px; font-size: 18px; border: 1px solid #D9D9D9; border-radius: 5px; padding: 5px;">
-                    <option value="beginner">Beginner</option>
-                    <option value="intermediate">Intermediate</option>
-                    <option value="advanced">Advanced</option>
-                </select>
-            </div>
-            <div style="text-align: center;">
-                <button type="submit" style="width: 150px; height: 50px; font-size: 24px; font-family: Montserrat; font-weight: 700; background-color: #0096CA; color: white; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
-                <button type="button" onclick="window.location.href='your-cancel-url';" style="width: 150px; height: 50px; font-size: 24px; font-family: Montserrat; font-weight: 700; background-color: #221F1F; color: white; border: none; border-radius: 5px; cursor: pointer;">Cancel</button>
-            </div>
-        </form>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ZENYZE Full Stack Developer</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 60px);
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 500px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .proficiency-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #2196F3;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1976D2;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="https://www.zenyze.com/wp-content/uploads/2021/04/zenyze-logo-2.png" alt="ZENYZE Logo">
+    <h1>BECOME A FULL STACK DEVELOPER</h1>
+    <p>1 V1 TRAINING - HANDS ON PROJECTS - CERTIFICATION - 60 DAYS</p>
+  </header>
+
+  <div class="container">
+    <div class="form-container">
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="university">University/College</label>
+        <input type="text" id="university" name="university" required>
+
+        <label for="degree">Degree Program/Field of Study</label>
+        <input type="text" id="degree" name="degree" required>
+
+        <label for="languages">Programming Languages Known</label>
+        <textarea id="languages" name="languages" required></textarea>
+
+        <div class="proficiency-container">
+          <label for="beginner">Beginner</label>
+          <input type="checkbox" id="beginner" name="proficiency" value="Beginner">
+
+          <label for="intermediate">Intermediate</label>
+          <input type="checkbox" id="intermediate" name="proficiency" value="Intermediate">
+
+          <label for="advanced">Advanced</label>
+          <input type="checkbox" id="advanced" name="proficiency" value="Advanced">
+        </div>
+
+        <div class="button-container">
+          <button type="button" onclick="window.location.href='/';">CANCEL</button>
+          <button type="submit">SUBMIT</button>
+        </div>
+      </form>
     </div>
-    
-    <!-- Footer and other elements -->
-    
-</div>
+  </div>
+</body>
+</html>
