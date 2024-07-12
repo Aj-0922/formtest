@@ -178,45 +178,39 @@
     </div>
 
     <script>
-        function submitForm() {
-            const formData = new FormData(document.getElementById('dataForm'));
-            const formDataObject = {};
-            formData.forEach((value, key) => {
-                formDataObject[key] = value;
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('dataForm');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                submitFormData();
             });
 
-            sendDataToGoogleSheets(formDataObject);
-            resetForm();
-        }
-
-        function resetForm() {
-            document.getElementById('dataForm').reset();
-        }
-
-        function sendDataToGoogleSheets(formData) {
-            const url = 'YOUR_GOOGLE_SHEETS_URL'; // Replace with your Google Sheets URL
-
-            fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            })
-            .then(response => {
-                if (response.ok) {
-                    console.log('Form data sent successfully!');
-                    // Optionally, handle success actions (e.g., show confirmation)
-                } else {
-                    console.error('Failed to send form data.');
-                    // Optionally, handle error actions
-                }
-            })
-            .catch(error => {
-                console.error('Error sending form data:', error);
-                // Optionally, handle error actions
-            });
-        }
+            function submitFormData() {
+                const formData = new FormData(form);
+                fetch('https://script.google.com/macros/s/AKfycby-M-iARGrQyoAr74sdxv4N3pwme1KPBBVAaYCN6RDN9Y5XCh_IC9AiByRr3ZBwSyI7/exec', {
+                    method: 'POST',
+                    body: JSON.stringify(Object.fromEntries(formData.entries())),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Form submission successful:', data);
+                    alert('Form submitted successfully!');
+                    form.reset();
+                })
+                .catch(error => {
+                    console.error('Error submitting form:', error);
+                    alert('There was an error submitting the form.');
+                });
+            }
+        });
     </script>
 </body>
 </html>
