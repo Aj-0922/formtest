@@ -1,71 +1,391 @@
-<div style="width: 100%; height: 100%; position: relative; background: white">
-    <div style="width: 1378px; height: 88px; left: 32px; top: 39px; position: absolute; background: white; box-shadow: 0px 4px 20.299999237060547px -7px rgba(0, 0, 0, 0.50); border-radius: 11px"></div>
-    <div style="width: 236.86px; height: 58.69px; left: 55px; top: 54px; position: absolute">
-        <div style="width: 236.86px; left: -0px; top: 0px; position: absolute">
-            <div style="width: 170.56px; height: 29.99px; left: 66.30px; top: 15.78px; position: absolute">
-                <div style="width: 24.58px; height: 29.97px; left: 0px; top: 0px; position: absolute; background: #333333"></div>
-                <div style="width: 21.20px; height: 29.98px; left: 30.83px; top: 0px; position: absolute; background: #333333"></div>
-                <div style="width: 25.06px; height: 29.98px; left: 59.48px; top: 0px; position: absolute; background: #333333"></div>
-                <div style="width: 25.01px; height: 29.97px; left: 90.52px; top: 0px; position: absolute; background: #333333"></div>
-                <div style="width: 24.58px; height: 29.98px; left: 118.54px; top: 0px; position: absolute; background: #333333"></div>
-                <div style="width: 21.20px; height: 29.98px; left: 149.36px; top: 0.01px; position: absolute; background: #333333"></div>
-            </div>
-            <div style="width: 58.53px; height: 58.69px; left: 0px; top: 0px; position: absolute">
-                <div style="width: 58.53px; height: 58.69px; left: 0px; top: 0px; position: absolute">
-                    <div style="width: 58.53px; height: 58.69px; left: 0px; top: 0px; position: absolute; background: linear-gradient(219deg, #016696 68%, #221F1F 90%)"></div>
-                    <div style="width: 9.76px; height: 10.03px; left: 2.39px; top: 47.04px; position: absolute; background: linear-gradient(42deg, #016696 74%, #221F1F 100%)"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form Design</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Montserrat, sans-serif;
+        }
+        .container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: white;
+        }
+        .header {
+            width: 1378px;
+            height: 88px;
+            position: absolute;
+            left: 32px;
+            top: 39px;
+            background: white;
+            box-shadow: 0px 4px 20.299999237060547px -7px rgba(0, 0, 0, 0.50);
+            border-radius: 11px;
+        }
+        .logo {
+            width: 236.86px;
+            height: 58.69px;
+            position: absolute;
+            left: 55px;
+            top: 54px;
+        }
+        .logo .shapes {
+            width: 236.86px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .logo .shapes .bars {
+            width: 170.56px;
+            height: 29.99px;
+            position: absolute;
+            left: 66.30px;
+            top: 15.78px;
+        }
+        .logo .shapes .bars div {
+            height: 100%;
+            position: absolute;
+            background: #333333;
+        }
+        .logo .shapes .bars div:nth-child(1) {
+            width: 24.58px;
+            left: 0;
+        }
+        .logo .shapes .bars div:nth-child(2) {
+            width: 21.20px;
+            left: 30.83px;
+        }
+        .logo .shapes .bars div:nth-child(3) {
+            width: 25.06px;
+            left: 59.48px;
+        }
+        .logo .shapes .bars div:nth-child(4) {
+            width: 25.01px;
+            left: 90.52px;
+        }
+        .logo .shapes .bars div:nth-child(5) {
+            width: 24.58px;
+            left: 118.54px;
+        }
+        .logo .shapes .bars div:nth-child(6) {
+            width: 21.20px;
+            left: 149.36px;
+        }
+        .logo .circle {
+            width: 58.53px;
+            height: 58.69px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: linear-gradient(219deg, #016696 68%, #221F1F 90%);
+        }
+        .logo .circle .inner {
+            width: 52.63px;
+            height: 52.63px;
+            position: absolute;
+            left: 2.79px;
+            top: 2.79px;
+        }
+        .logo .circle .inner div {
+            position: absolute;
+        }
+        .logo .circle .inner div:nth-child(1) {
+            width: 15.06px;
+            height: 10.49px;
+            left: 7.71px;
+            top: 0.51px;
+            background: linear-gradient(57deg, #221F1F 0%, #0096CA 12%);
+        }
+        .logo .circle .inner div:nth-child(2) {
+            width: 16.15px;
+            height: 5.50px;
+            left: 21.26px;
+            top: 0;
+            background: linear-gradient(318deg, #221F1F 0%, #0096CA 12%);
+        }
+        .logo .circle .inner div:nth-child(3) {
+            width: 5.33px;
+            height: 18.55px;
+            left: 47.30px;
+            top: 15.68px;
+            background: linear-gradient(137deg, #221F1F 0%, #0096CA 12%);
+        }
+        .logo .circle .inner div:nth-child(4) {
+            width: 9.26px;
+            height: 11.08px;
+            left: 42.14px;
+            top: 33.18px;
+            background: linear-gradient(29deg, #221F1F 0%, #0096CA 12%);
+        }
+        .logo .circle .inner div:nth-child(5) {
+            width: 6.20px;
+            height: 21.03px;
+            left: 0;
+            top: 15.68px;
+            background: linear-gradient(217deg, #221F1F 0%, #0096CA 12%);
+        }
+        .logo .circle .inner div:nth-child(6) {
+            width: 34.74px;
+            height: 17.14px;
+            left: 2.16px;
+            top: 35.49px;
+            background: linear-gradient(222deg, #221F1F 0%, #0096CA 12%);
+        }
+        .section {
+            width: 1265px;
+            height: 85px;
+            position: absolute;
+            left: 88px;
+            background: #D9D9D9;
+            border-radius: 5px;
+        }
+        .section:nth-child(2) {
+            top: 783px;
+        }
+        .section:nth-child(3) {
+            top: 967px;
+        }
+        .section:nth-child(4) {
+            top: 1150px;
+        }
+        .section:nth-child(5) {
+            top: 1334px;
+        }
+        .section:nth-child(6) {
+            top: 1517px;
+        }
+        .section:nth-child(7) {
+            top: 1701px;
+            height: 121px;
+        }
+        .form-field {
+            position: absolute;
+            color: black;
+            font-size: 24px;
+            font-family: Montserrat;
+            font-weight: 500;
+            word-wrap: break-word;
+        }
+        .form-field:nth-child(1) {
+            width: 100px;
+            left: 88px;
+            top: 733px;
+        }
+        .form-field:nth-child(2) {
+            width: 95px;
+            left: 87px;
+            top: 918px;
+        }
+        .form-field:nth-child(3) {
+            width: 257px;
+            left: 87px;
+            top: 1100px;
+        }
+        .form-field:nth-child(4) {
+            width: 301px;
+            left: 88px;
+            top: 1284px;
+        }
+        .form-field:nth-child(5) {
+            width: 516px;
+            left: 88px;
+            top: 1467px;
+        }
+        .form-field:nth-child(6) {
+            width: 492px;
+            left: 88px;
+            top: 1646px;
+        }
+        .form-field:nth-child(7) {
+            width: 736px;
+            left: 88px;
+            top: 1885px;
+        }
+        .button {
+            position: absolute;
+            text-align: center;
+            cursor: pointer;
+            font-size: 32px;
+            font-family: Montserrat;
+            font-weight: 700;
+            text-transform: uppercase;
+            word-wrap: break-word;
+            border-radius: 5px;
+        }
+        .button:nth-child(1) {
+            background: #0096CA;
+            width: 324px;
+            height: 80px;
+            left: 310px;
+            top: 2092px;
+            color: white;
+        }
+        .button:nth-child(2) {
+            background: #D9D9D9;
+            width: 324px;
+            height: 80px;
+            left: 745px;
+            top: 2092px;
+            color: #221F1F;
+        }
+        .level {
+            position: absolute;
+            color: black;
+            font-size: 24px;
+            font-family: Montserrat;
+            font-weight: 500;
+            word-wrap: break-word;
+        }
+        .level:nth-child(1) {
+            width: 179.96px;
+            left: 88.21px;
+            top: 1948.52px;
+        }
+        .level:nth-child(2) {
+            width: 235.52px;
+            left: 597.91px;
+            top: 1948.52px;
+        }
+        .level:nth-child(3) {
+            width: 190.84px;
+            left: 1163.16px;
+            top: 1950.93px;
+        }
+        .header-text {
+            position: absolute;
+            color: #1E1E1E;
+            font-size: 24px;
+            font-family: Montserrat;
+            font-weight: 600;
+            word-wrap: break-word;
+        }
+        .header-text:nth-child(1) {
+            left: 1095px;
+            top: 69px;
+        }
+        .header-text:nth-child(2) {
+            left: 439px;
+            top: 58px;
+        }
+        .header-text:nth-child(3) {
+            left: 45px;
+            top: 61px;
+        }
+        .section-title {
+            position: absolute;
+            color: black;
+            font-size: 32px;
+            font-family: Montserrat;
+            font-weight: 400;
+            letter-spacing: 43.20px;
+            word-wrap: break-word;
+        }
+        .section-title:nth-child(1) {
+            left: 97.67px;
+            top: 681px;
+        }
+        .section-title:nth-child(2) {
+            left: 97.67px;
+            top: 866px;
+        }
+        .section-title:nth-child(3) {
+            left: 97.67px;
+            top: 1048px;
+        }
+        .section-title:nth-child(4) {
+            left: 97.67px;
+            top: 1232px;
+        }
+        .section-title:nth-child(5) {
+            left: 97.67px;
+            top: 1415px;
+        }
+        .section-title:nth-child(6) {
+            left: 97.67px;
+            top: 1598px;
+        }
+        .section-title:nth-child(7) {
+            left: 97.67px;
+            top: 1782px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <div class="shapes">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
-                <div style="width: 52.63px; height: 52.63px; left: 2.79px; top: 2.79px; position: absolute">
-                    <div style="width: 15.06px; height: 10.49px; left: 7.71px; top: 0.51px; position: absolute; background: linear-gradient(57deg, #221F1F 0%, #0096CA 12%)"></div>
-                    <div style="width: 16.15px; height: 5.50px; left: 21.26px; top: 0px; position: absolute; background: linear-gradient(318deg, #221F1F 0%, #0096CA 12%)"></div>
-                    <div style="width: 5.33px; height: 18.55px; left: 47.30px; top: 15.68px; position: absolute; background: linear-gradient(137deg, #221F1F 0%, #0096CA 12%)"></div>
-                    <div style="width: 9.26px; height: 11.08px; left: 42.14px; top: 33.18px; position: absolute; background: linear-gradient(29deg, #221F1F 0%, #0096CA 12%)"></div>
-                    <div style="width: 6.20px; height: 21.03px; left: 0px; top: 15.68px; position: absolute; background: linear-gradient(217deg, #221F1F 0%, #0096CA 12%)"></div>
-                    <div style="width: 34.74px; height: 17.14px; left: 2.16px; top: 35.49px; position: absolute; background: linear-gradient(222deg, #221F1F 0%, #0096CA 12%)"></div>
+                <div class="circle">
+                    <div class="inner">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
             </div>
+            <div class="header-text">SOLUTIONS</div>
+        </div>
+        <div class="section">
+            <div class="section-title">BECOME A</div>
+            <div class="section-title">FULL STACK DEVELOPER</div>
+        </div>
+        <form action="#" method="POST">
+            <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-field">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-field">
+                <label for="university">University/College</label>
+                <input type="text" id="university" name="university" required>
+            </div>
+            <div class="form-field">
+                <label for="degree">Degree Program/Field of Study</label>
+                <input type="text" id="degree" name="degree" required>
+            </div>
+            <div class="form-field">
+                <label for="languages">Programming Languages Known</label>
+                <input type="text" id="languages" name="languages" required>
+            </div>
+            <div class="form-field">
+                <label for="level">Proficiency Level in Each Programming Language</label>
+                <select id="level" name="level" required>
+                    <option value="" disabled selected>Select proficiency level</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+            </div>
+            <button type="submit" class="button">Submit</button>
+            <button type="button" class="button">Cancel</button>
+        </form>
+        <div class="section">
+            <div class="section-title">1 v 1 Training</div>
+            <div class="section-title">HANDS ON PROJECTS</div>
+            <div class="section-title">CERTIFICATION</div>
+            <div class="section-title">60 DAYS</div>
         </div>
     </div>
-    <form action="your-google-sheets-endpoint" method="POST" style="width: 100%;">
-        <div style="width: 1265px; height: 85px; left: 88px; top: 783px; position: absolute; background: #D9D9D9; border-radius: 5px"></div>
-        <div style="width: 1265px; height: 84px; left: 88px; top: 967px; position: absolute; background: #D9D9D9; border-radius: 5px"></div>
-        <div style="width: 1265px; height: 85px; left: 88px; top: 1150px; position: absolute; background: #D9D9D9; border-radius: 5px"></div>
-        <div style="width: 1265px; height: 84px; left: 88px; top: 1334px; position: absolute; background: #D9D9D9; border-radius: 5px"></div>
-        <div style="width: 1265px; height: 85px; left: 88px; top: 1517px; position: absolute; background: #D9D9D9; border-radius: 5px"></div>
-        <div style="width: 1265px; height: 121px; left: 88px; top: 1701px; position: absolute; background: #D9D9D9; border-radius: 5px"></div>
-        <div style="width: 324px; height: 80px; left: 310px; top: 2092px; position: absolute; background: #D9D9D9; border-radius: 5px"></div>
-        <div style="width: 324px; height: 80px; left: 745px; top: 2092px; position: absolute; background: #0096CA; border-radius: 5px"></div>
-        <label for="name" style="width: 100px; height: 35px; left: 88px; top: 733px; position: absolute; color: black; font-size: 24px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Name</label>
-        <input type="text" id="name" name="name" style="width: 400px; height: 35px; left: 250px; top: 733px; position: absolute; border: 1px solid #ccc; border-radius: 5px; padding: 5px;">
-        
-        <label for="email" style="width: 95px; height: 35px; left: 87px; top: 918px; position: absolute; color: black; font-size: 24px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Email</label>
-        <input type="email" id="email" name="email" style="width: 400px; height: 35px; left: 250px; top: 918px; position: absolute; border: 1px solid #ccc; border-radius: 5px; padding: 5px;">
-        
-        <label for="phone" style="width: 257px; height: 35px; left: 87px; top: 1100px; position: absolute; color: black; font-size: 24px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Phone Number</label>
-        <input type="tel" id="phone" name="phone" style="width: 400px; height: 35px; left: 350px; top: 1100px; position: absolute; border: 1px solid #ccc; border-radius: 5px; padding: 5px;">
-        
-        <label for="university" style="width: 250px; height: 35px; left: 88px; top: 1283px; position: absolute; color: black; font-size: 24px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">University/College</label>
-        <input type="text" id="university" name="university" style="width: 400px; height: 35px; left: 350px; top: 1283px; position: absolute; border: 1px solid #ccc; border-radius: 5px; padding: 5px;">
-        
-        <label for="degree" style="width: 400px; height: 35px; left: 88px; top: 1467px; position: absolute; color: black; font-size: 24px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Degree Program/Field of Study</label>
-        <input type="text" id="degree" name="degree" style="width: 400px; height: 35px; left: 528px; top: 1467px; position: absolute; border: 1px solid #ccc; border-radius: 5px; padding: 5px;">
-        
-        <label for="languages" style="width: 400px; height: 35px; left: 88px; top: 1651px; position: absolute; color: black; font-size: 24px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Programming Languages Known</label>
-        <input type="text" id="languages" name="languages" style="width: 400px; height: 35px; left: 528px; top: 1651px; position: absolute; border: 1px solid #ccc; border-radius: 5px; padding: 5px;">
-        
-        <label for="proficiency" style="width: 400px; height: 35px; left: 88px; top: 1834px; position: absolute; color: black; font-size: 24px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Proficiency Level in Each Programming Language</label>
-        <input type="text" id="proficiency" name="proficiency" style="width: 400px; height: 35px; left: 528px; top: 1834px; position: absolute; border: 1px solid #ccc; border-radius: 5px; padding: 5px;">
-        
-        <button type="submit" style="width: 300px; height: 50px; left: 680px; top: 2092px; position: absolute; background-color: #016696; color: white; font-size: 24px; font-family: Montserrat; font-weight: 700; text-transform: uppercase; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
-    </form>
-    <div style="width: 300px; height: 50px; left: 920px; top: 2092px; position: absolute; background-color: #221F1F; color: white; font-size: 24px; font-family: Montserrat; font-weight: 700; text-transform: uppercase; border: none; border-radius: 5px; cursor: pointer;">Cancel</div>
-    <div style="width: 1412px; height: 50px; left: 286px; top: 128px; position: absolute; background: #1E1E1E; border-radius: 5px"></div>
-    <div style="width: 1412px; height: 50px; left: 286px; top: 318px; position: absolute; background: #0096CA; border-radius: 5px"></div>
-    <div style="width: 1463px; height: 50px; left: 286px; top: 579px; position: absolute; background: #1E1E1E; border-radius: 5px"></div>
-    <div style="width: 1463px; height: 50px; left: 286px; top: 874px; position: absolute; background: #0096CA; border-radius: 5px"></div>
-    <div style="width: 1463px; height: 50px; left: 286px; top: 1137px; position: absolute; background: #1E1E1E; border-radius: 5px"></div>
-    <div style="width: 1463px; height: 50px; left: 286px; top: 1432px; position: absolute; background: #0096CA; border-radius: 5px"></div>
-    <div style="width: 1124px; height: 231px; left: 108px; top: 2161px; position: absolute; background: #0096CA; border-radius: 5px"></div>
-    <div style="width: 540px; height: 231px; left: 608px; top: 2161px; position: absolute; background: #221F1F; border-radius: 5px"></div>
-    <div style="width: 1510px; height: 231px; left: 0px; top: 2466px; position: absolute; background: #0096CA; border-radius: 5px"></div>
-</div>
+</body>
+</html>
