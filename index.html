@@ -1,216 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styled Form with Google Sheets Integration</title>
-    <style>
-        /* Your specific design styles */
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f2f2f2;
-        }
-        .container {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            background: white;
-        }
-        .header {
-            width: 1378px;
-            height: 88px;
-            left: 32px;
-            top: 39px;
-            position: absolute;
-            background: white;
-            box-shadow: 0px 4px 20.3px -7px rgba(0, 0, 0, 0.5);
-            border-radius: 11px;
-        }
-        .logo {
-            width: 236.86px;
-            height: 58.69px;
-            left: 55px;
-            top: 54px;
-            position: absolute;
-        }
-        .form-section {
-            position: absolute;
-            left: 88px;
-            top: 783px;
-            width: 1265px;
-            height: 85px;
-            background: #D9D9D9;
-            border-radius: 5px;
-            padding: 10px;
-        }
-        .form-input {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-        .form-input label {
-            display: block;
-            font-size: 24px;
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
-        .form-input input,
-        .form-input textarea {
-            width: calc(100% - 16px);
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .form-buttons {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .form-buttons button {
-            padding: 10px 20px;
-            font-size: 18px;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-        .form-buttons button.cancel {
-            background-color: #D9D9D9;
-            color: #1E1E1E;
-        }
-        .form-buttons button.submit {
-            background-color: #0096CA;
-            color: #fff;
-        }
-        .solutions {
-            left: 1095px;
-            top: 69px;
-            position: absolute;
-            color: #1E1E1E;
-            font-size: 24px;
-            font-family: Montserrat;
-            font-weight: 600;
-            word-wrap: break-word;
-        }
-        .simplified {
-            left: 1095px;
-            top: 69px;
-            position: absolute;
-            color: #0096CA;
-            font-size: 24px;
-            font-family: Montserrat;
-            font-weight: 700;
-            word-wrap: break-word;
-        }
-        .full-stack {
-            width: 1294px;
-            height: 107px;
-            left: 73px;
-            top: 392px;
-            position: absolute;
-            text-align: center;
-            color: #016696;
-            font-size: 96px;
-            font-family: Montserrat;
-            font-style: italic;
-            font-weight: 900;
-            word-wrap: break-word;
-        }
-        .days {
-            left: 1245px;
-            top: 513px;
-            position: absolute;
-            text-align: center;
-            color: black;
-            font-size: 24px;
-            font-family: Montserrat;
-            font-weight: 800;
-            text-transform: uppercase;
-            word-wrap: break-word;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header"></div>
-        <div class="logo"></div>
-        <div class="form-section">
-            <form id="dataForm">
-                <div class="form-input">
-                    <label for="name" style="left: 88px; top: 733px; position: absolute;">Name</label>
-                    <input type="text" id="name" name="name" required style="left: 88px; top: 768px; position: absolute; width: 1007px; height: 35px;">
-                </div>
-                <div class="form-input">
-                    <label for="email" style="left: 87px; top: 918px; position: absolute;">Email</label>
-                    <input type="email" id="email" name="email" required style="left: 87px; top: 953px; position: absolute; width: 1008px; height: 35px;">
-                </div>
-                <div class="form-input">
-                    <label for="phone" style="left: 87px; top: 1100px; position: absolute;">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required style="left: 87px; top: 1135px; position: absolute; width: 1008px; height: 35px;">
-                </div>
-                <div class="form-input">
-                    <label for="university" style="left: 88px; top: 1284px; position: absolute;">University/College</label>
-                    <input type="text" id="university" name="university" required style="left: 88px; top: 1319px; position: absolute; width: 1007px; height: 35px;">
-                </div>
-                <div class="form-input">
-                    <label for="degree" style="left: 88px; top: 1467px; position: absolute;">Degree Program/Field of Study</label>
-                    <input type="text" id="degree" name="degree" required style="left: 88px; top: 1502px; position: absolute; width: 1007px; height: 35px;">
-                </div>
-                <div class="form-input">
-                    <label for="languages" style="left: 88px; top: 1646px; position: absolute;">Programming Languages Known</label>
-                    <input type="text" id="languages" name="languages" required style="left: 88px; top: 1681px; position: absolute; width: 1007px; height: 35px;">
-                </div>
-                <div class="form-input">
-                    <label for="proficiency" style="left: 88px; top: 1885px; position: absolute;">Proficiency Level in Each Programming Language</label>
-                    <textarea id="proficiency" name="proficiency" rows="4" required style="left: 88px; top: 1920px; position: absolute; width: 1007px; height: 130px;"></textarea>
-                </div>
-                <div class="form-buttons">
-                    <button type="button" class="cancel-button" onclick="resetForm()" style="left: 406px; top: 2112px; position: absolute;">Cancel</button>
-                    <button type="button" class="submit-button" onclick="submitForm()" style="left: 842px; top: 2113px; position: absolute;">Submit</button>
-                </div>
-            </form>
-        </div>
-        <div class="solutions">SOLUTIONS</div>
-        <div class="simplified">SIMPLIFIED</div>
-        <div class="full-stack">FULL STACK DEVELOPER</div>
-        <div class="days">60 DAYS</div>
+<div style="width: 100%; height: 100%; position: relative; background: white">
+    <!-- Header Section -->
+    <div style="width: 1378px; height: 88px; left: 32px; top: 39px; position: absolute; background: white; box-shadow: 0px 4px 20.299999237060547px -7px rgba(0, 0, 0, 0.50); border-radius: 11px"></div>
+    <div style="width: 236.86px; height: 58.69px; left: 55px; top: 54px; position: absolute">
+        <!-- Logo and branding elements -->
     </div>
+    
+    <!-- Form Section -->
+    <form id="myForm" style="width: 100%; max-width: 1200px; margin: 0 auto; padding-top: 200px;">
+        <!-- Name -->
+        <div style="width: 100%; margin-bottom: 20px;">
+            <label for="name" style="font-family: Montserrat; font-size: 24px; color: #333333; margin-right: 10px;">Name</label>
+            <input type="text" id="name" name="name" style="width: 300px; padding: 10px; font-size: 18px; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        
+        <!-- Email -->
+        <div style="width: 100%; margin-bottom: 20px;">
+            <label for="email" style="font-family: Montserrat; font-size: 24px; color: #333333; margin-right: 10px;">Email</label>
+            <input type="email" id="email" name="email" style="width: 300px; padding: 10px; font-size: 18px; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        
+        <!-- Phone Number -->
+        <div style="width: 100%; margin-bottom: 20px;">
+            <label for="phone" style="font-family: Montserrat; font-size: 24px; color: #333333; margin-right: 10px;">Phone Number</label>
+            <input type="tel" id="phone" name="phone" style="width: 300px; padding: 10px; font-size: 18px; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        
+        <!-- University/College -->
+        <div style="width: 100%; margin-bottom: 20px;">
+            <label for="university" style="font-family: Montserrat; font-size: 24px; color: #333333; margin-right: 10px;">University/College</label>
+            <input type="text" id="university" name="university" style="width: 300px; padding: 10px; font-size: 18px; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        
+        <!-- Degree Program/Field of Study -->
+        <div style="width: 100%; margin-bottom: 20px;">
+            <label for="degree" style="font-family: Montserrat; font-size: 24px; color: #333333; margin-right: 10px;">Degree Program/Field of Study</label>
+            <input type="text" id="degree" name="degree" style="width: 300px; padding: 10px; font-size: 18px; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        
+        <!-- Programming Languages Known -->
+        <div style="width: 100%; margin-bottom: 20px;">
+            <label for="languages" style="font-family: Montserrat; font-size: 24px; color: #333333; margin-right: 10px;">Programming Languages Known</label>
+            <input type="text" id="languages" name="languages" style="width: 300px; padding: 10px; font-size: 18px; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        
+        <!-- Proficiency Level -->
+        <div style="width: 100%; margin-bottom: 20px;">
+            <label for="proficiency" style="font-family: Montserrat; font-size: 24px; color: #333333; margin-right: 10px;">Proficiency Level</label>
+            <select id="proficiency" name="proficiency" style="width: 300px; padding: 10px; font-size: 18px; border: 1px solid #ccc; border-radius: 5px;">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+        </div>
+        
+        <!-- Submit Button -->
+        <div style="text-align: center;">
+            <button type="button" onclick="submitForm()" style="padding: 12px 24px; font-family: Montserrat; font-size: 20px; background-color: #0096CA; color: white; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
+        </div>
+    </form>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('dataForm');
-            form.addEventListener('submit', function (event) {
-                event.preventDefault();
-                submitFormData();
-            });
+    <!-- Google Sheets Success Message -->
+    <div id="successMessage" style="display: none; text-align: center; margin-top: 20px;">
+        <p style="font-family: Montserrat; font-size: 24px; color: #0096CA;">Thank you for your submission!</p>
+    </div>
+</div>
 
-            function submitFormData() {
-                const formData = new FormData(form);
-                fetch('https://script.google.com/macros/s/AKfycby-M-iARGrQyoAr74sdxv4N3pwme1KPBBVAaYCN6RDN9Y5XCh_IC9AiByRr3ZBwSyI7/exec', {
-                    method: 'POST',
-                    body: JSON.stringify(Object.fromEntries(formData.entries())),
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    console.log('Form submission successful:', data);
-                    alert('Form submitted successfully!');
-                    form.reset();
-                })
-                .catch(error => {
-                    console.error('Error submitting form:', error);
-                    alert('There was an error submitting the form.');
-                });
-            }
+<script>
+    function submitForm() {
+        const formData = new FormData(document.getElementById('myForm'));
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
         });
-    </script>
-</body>
-</html>
+
+        google.script.run.submitForm(data);
+        document.getElementById('myForm').style.display = 'none';
+        document.getElementById('successMessage').style.display = 'block';
+    }
+</script>
