@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Styled Form with Google Sheets Integration</title>
     <style>
-        /* Your existing CSS styles */
+        /* Your specific design styles */
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
@@ -18,19 +18,32 @@
             position: relative;
             background: white;
         }
-        .form-section {
-            position: absolute;
+        .header {
+            width: 1378px;
+            height: 88px;
             left: 32px;
             top: 39px;
-            width: 1378px;
-            height: auto;
+            position: absolute;
             background: white;
             box-shadow: 0px 4px 20.3px -7px rgba(0, 0, 0, 0.5);
             border-radius: 11px;
-            padding: 20px;
         }
-        .form-section form {
-            position: relative;
+        .logo {
+            width: 236.86px;
+            height: 58.69px;
+            left: 55px;
+            top: 54px;
+            position: absolute;
+        }
+        .form-section {
+            position: absolute;
+            left: 88px;
+            top: 783px;
+            width: 1265px;
+            height: 85px;
+            background: #D9D9D9;
+            border-radius: 5px;
+            padding: 10px;
         }
         .form-input {
             width: 100%;
@@ -40,7 +53,7 @@
             display: block;
             font-size: 24px;
             font-weight: 500;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
         .form-input input,
         .form-input textarea {
@@ -60,55 +73,15 @@
             font-weight: 600;
             border: none;
             cursor: pointer;
-        }
-        .form-buttons button.cancel {
-            background-color: #221f1f;
-            color: #fff;
             margin-right: 10px;
         }
+        .form-buttons button.cancel {
+            background-color: #D9D9D9;
+            color: #1E1E1E;
+        }
         .form-buttons button.submit {
-            background-color: #0096ca;
+            background-color: #0096CA;
             color: #fff;
-        }
-        /* Your specific design styles */
-        .header {
-            width: 1378px;
-            height: 88px;
-            left: 32px;
-            top: 39px;
-            position: absolute;
-            background: white;
-            box-shadow: 0px 4px 20.3px -7px rgba(0, 0, 0, 0.5);
-            border-radius: 11px;
-        }
-        .logo {
-            width: 236.86px;
-            height: 58.69px;
-            left: 55px;
-            top: 54px;
-            position: absolute;
-        }
-        .submit-button {
-            left: 842px;
-            top: 2113px;
-            position: absolute;
-            color: white;
-            font-size: 32px;
-            font-family: Montserrat;
-            font-weight: 700;
-            text-transform: uppercase;
-            word-wrap: break-word;
-        }
-        .cancel-button {
-            left: 406px;
-            top: 2112px;
-            position: absolute;
-            color: #221F1F;
-            font-size: 32px;
-            font-family: Montserrat;
-            font-weight: 700;
-            text-transform: uppercase;
-            word-wrap: break-word;
         }
         .solutions {
             left: 1095px;
@@ -164,21 +137,44 @@
         <div class="logo"></div>
         <div class="form-section">
             <form id="dataForm">
-                <div class="form-input" style="left: 88px; top: 733px; position: absolute; color: black; font-size: 24px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Name</div>
-                <div class="form-input" style="left: 87px; top: 918px; position: absolute; color: black; font-size: 24px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Email</div>
-                <div class="form-input" style="left: 87px; top: 1100px; position: absolute; color: black; font-size: 24px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Phone Number</div>
-                <div class="form-input" style="left: 88px; top: 1284px; position: absolute; color: black; font-size: 24px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">University/College</div>
-                <div class="form-input" style="left: 88px; top: 1467px; position: absolute; color: black; font-size: 24px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Degree Program/Field of Study</div>
-                <div class="form-input" style="left: 88px; top: 1646px; position: absolute; color: black; font-size: 24px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Programming Languages Known</div>
-                <div class="form-input" style="left: 88px; top: 1885px; position: absolute; color: black; font-size: 24px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Proficiency Level in Each Programming Language</div>
-                <div class="submit-button">Submit</div>
-                <div class="cancel-button">Cancel</div>
-                <div class="days">60 DAYS</div>
+                <div class="form-input">
+                    <label for="name" style="left: 88px; top: 733px; position: absolute;">Name</label>
+                    <input type="text" id="name" name="name" required style="left: 88px; top: 768px; position: absolute; width: 1007px; height: 35px;">
+                </div>
+                <div class="form-input">
+                    <label for="email" style="left: 87px; top: 918px; position: absolute;">Email</label>
+                    <input type="email" id="email" name="email" required style="left: 87px; top: 953px; position: absolute; width: 1008px; height: 35px;">
+                </div>
+                <div class="form-input">
+                    <label for="phone" style="left: 87px; top: 1100px; position: absolute;">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required style="left: 87px; top: 1135px; position: absolute; width: 1008px; height: 35px;">
+                </div>
+                <div class="form-input">
+                    <label for="university" style="left: 88px; top: 1284px; position: absolute;">University/College</label>
+                    <input type="text" id="university" name="university" required style="left: 88px; top: 1319px; position: absolute; width: 1007px; height: 35px;">
+                </div>
+                <div class="form-input">
+                    <label for="degree" style="left: 88px; top: 1467px; position: absolute;">Degree Program/Field of Study</label>
+                    <input type="text" id="degree" name="degree" required style="left: 88px; top: 1502px; position: absolute; width: 1007px; height: 35px;">
+                </div>
+                <div class="form-input">
+                    <label for="languages" style="left: 88px; top: 1646px; position: absolute;">Programming Languages Known</label>
+                    <input type="text" id="languages" name="languages" required style="left: 88px; top: 1681px; position: absolute; width: 1007px; height: 35px;">
+                </div>
+                <div class="form-input">
+                    <label for="proficiency" style="left: 88px; top: 1885px; position: absolute;">Proficiency Level in Each Programming Language</label>
+                    <textarea id="proficiency" name="proficiency" rows="4" required style="left: 88px; top: 1920px; position: absolute; width: 1007px; height: 130px;"></textarea>
+                </div>
+                <div class="form-buttons">
+                    <button type="button" class="cancel-button" onclick="resetForm()" style="left: 406px; top: 2112px; position: absolute;">Cancel</button>
+                    <button type="button" class="submit-button" onclick="submitForm()" style="left: 842px; top: 2113px; position: absolute;">Submit</button>
+                </div>
             </form>
         </div>
         <div class="solutions">SOLUTIONS</div>
         <div class="simplified">SIMPLIFIED</div>
         <div class="full-stack">FULL STACK DEVELOPER</div>
+        <div class="days">60 DAYS</div>
     </div>
 
     <script>
@@ -189,10 +185,7 @@
                 formDataObject[key] = value;
             });
 
-            // Call function to send data to Google Sheets (explained in backend integration)
             sendDataToGoogleSheets(formDataObject);
-            
-            // Reset form after submission (optional)
             resetForm();
         }
 
@@ -201,10 +194,28 @@
         }
 
         function sendDataToGoogleSheets(formData) {
-            // Implement Google Sheets API integration here (explained in backend integration)
-            // This involves sending formData to your backend server or serverless function
-            // which then interacts securely with Google Sheets API.
-            console.log(formData); // Replace with actual API call
+            const url = 'YOUR_GOOGLE_SHEETS_URL'; // Replace with your Google Sheets URL
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log('Form data sent successfully!');
+                    // Optionally, handle success actions (e.g., show confirmation)
+                } else {
+                    console.error('Failed to send form data.');
+                    // Optionally, handle error actions
+                }
+            })
+            .catch(error => {
+                console.error('Error sending form data:', error);
+                // Optionally, handle error actions
+            });
         }
     </script>
 </body>
