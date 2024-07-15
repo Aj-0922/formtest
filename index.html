@@ -1,176 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-body {
-  font-family: Montserrat;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-.container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.header h1 {
-  text-align: center;
-  margin: 50%;
-  font-size: 2.5em;
-  color: #333;
-}
-
-.header p {
-  font-size: 1.2em;
-  color: #666;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #333;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="tel"],
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.form-group textarea {
-  resize: vertical;
-}
-
-.form-group .checkbox {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.form-group .checkbox input[type="checkbox"] {
-  margin-right: 5px;
-}
-
-.buttons {
-  text-align: center;
-}
-
-.buttons button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.buttons button:hover {
-  background-color: #0069d9;
-}
-
-.buttons button:disabled {
-  opacity: 0.5;
-  cursor: default;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Developer Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            max-width: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+        .header h1 {
+            font-size: 36px;
+            margin: 10px 0;
+            color: #007bff;
+        }
+        .header p {
+            font-size: 14px;
+            color: #666;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="tel"] {
+            padding: 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .proficiency-level {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .proficiency-level label {
+            display: flex;
+            align-items: center;
+        }
+        .proficiency-level input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .buttons button {
+            padding: 15px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .buttons .cancel {
+            background-color: #ccc;
+            color: #fff;
+        }
+        .buttons .submit {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .sub-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .sub-header h2 {
+            font-size: 24px;
+            color: #333;
+            font-weight: normal;
+            margin: 0;
+        }
+        .sub-header p {
+            display: inline-block;
+            margin: 0 20px;
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+        }
+        .sub-header p span {
+            color: #007bff;
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
-  <div class="header">
-    <div style="width: 1378px; height: 88px; left: 32px; top: 39px; position: absolute; background: white; box-shadow: 0px 4px 20.299999237060547px -7px rgba(0, 0, 0, 0.50); border-radius: 11px"></div>
-    <div style="left: 1095px; top: 69px>
-        <span style="color: #1E1E1E; font-size: 24px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">SOLUTIONS</span>
-        <span style="color: black; font-size: 24px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"></span>
-        <span style="color: #0096CA; font-size: 24px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">SIMPLIFIED</span>
+    <div class="container">
+        <div class="header">
+            <img src="path/to/your/logo.png" alt="Zenyze Logo">
+        </div>
+        <div class="sub-header">
+            <h2>BECOME A <span style="color:#007bff;">FULL STACK DEVELOPER</span></h2>
+            <p>1 V 1 TRAINING</p>
+            <p>HANDS ON PROJECTS</p>
+            <p>CERTIFICATION</p>
+            <p>60 DAYS</p>
+        </div>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="university">University/College</label>
+            <input type="text" id="university" name="university">
+
+            <label for="degree">Degree Program/Field of Study</label>
+            <input type="text" id="degree" name="degree">
+
+            <label for="languages">Programming Languages Known</label>
+            <input type="text" id="languages" name="languages">
+
+            <label>Proficiency Level in Each Programming Language</label>
+            <div class="proficiency-level">
+                <label><input type="checkbox" name="beginner"> <span style="color: #8cc63f;">Beginner</span></label>
+                <label><input type="checkbox" name="intermediate"> <span style="color: #fbb03b;">Intermediate</span></label>
+                <label><input type="checkbox" name="advanced"> <span style="color: #ed1c24;">Advanced</span></label>
+            </div>
+
+            <div class="buttons">
+                <button type="button" class="cancel">CANCEL</button>
+                <button type="submit" class="submit">SUBMIT</button>
+            </div>
+        </form>
     </div>
-    <div style="width: 236.86px; height: 58.69px; left: 55px; top: 54px>
-    <h1 style="width: 561px; height: 40px; left: 439px; top: 349px; text-align: center; color: black; font-size: 32px; font-family: Montserrat; font-weight: 400; letter-spacing: 43.20px; word-wrap: break-word">BECOME A</h1>
-    <h1 style="width: 1294px; height: 107px; left: 73px; top: 392px; text-align: center; color: #016696; font-size: 96px; font-family: Montserrat; font-style: italic; font-weight: 900; word-wrap: break-word">FULL STACK DEVELOPER</h1>
-    <p style="left: 77px; top: 513px; text-align: center; color: black; font-size: 24px; font-family: Montserrat; font-weight: 800; text-transform: uppercase; word-wrap: break-word">1 v 1 Training</p>
-    <p style="left: 424px; top: 513px; text-align: center; color: black; font-size: 24px; font-family: Montserrat; font-weight: 800; text-transform: uppercase; word-wrap: break-word">HANDS ON PROJECTS</p>
-    <p style="left: 876px; top: 513px; text-align: center; color: black; font-size: 24px; font-family: Montserrat; font-weight: 800; text-transform: uppercase; word-wrap: break-word">CERTIFICATION</p>
-    <p style="left: 1245px; top: 513px;  text-align: center; color: black; font-size: 24px; font-family: Montserrat; font-weight: 800; text-transform: uppercase; word-wrap: break-word">60 DAYS</p>
-  </div>
-
-  <form>
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-    </div>
-
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-
-    <div class="form-group">
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" required>
-    </div>
-
-    <div class="form-group">
-      <label for="university">University/College:</label>
-      <input type="text" id="university" name="university" required>
-    </div>
-
-    <div class="form-group">
-      <label for="program">Degree Program/Field of Study:</label>
-      <input type="text" id="program" name="program" required>
-    </div>
-
-    <div class="form-group">
-      <label for="languages">Programming Languages Known:</label>
-      <textarea id="languages" name="languages" required></textarea>
-    </div>
-
-    <div class="form-group">
-      <label for="proficiency">Proficiency Level in Each Programming Language:</label>
-      <div class="checkbox">
-        <input type="checkbox" id="beginner" name="proficiency" value="Beginner">
-        <label for="beginner">Beginner</label>
-      </div>
-      <div class="checkbox">
-        <input type="checkbox" id="intermediate" name="proficiency" value="Intermediate">
-        <label for="intermediate">Intermediate</label>
-      </div>
-      <div class="checkbox">
-        <input type="checkbox" id="advanced" name="proficiency" value="Advanced">
-        <label for="advanced">Advanced</label>
-      </div>
-    </div>
-
-    <div class="buttons">
-      <button type="button" onclick="cancelForm()">CANCEL</button>
-      <button type="submit">SUBMIT</button>
-    </div>
-  </form>
-
-  <script>
-  function cancelForm() {
-    alert("Form cancelled!");
-  }
-  </script>
-
-</div>
 
 </body>
 </html>
