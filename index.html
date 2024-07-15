@@ -1,172 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <title>ZenYze Full Stack Developer Program</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
 
-        .container {
-            width: 100%;
-            max-width: 600px;
-            margin: auto;
-            padding: 20px;
-        }
+    .container {
+      width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
 
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-        }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-        .header img {
-            max-height: 50px;
-        }
+    .zenyze-logo {
+      display: block;
+      margin: 0 auto;
+      width: 100px;
+      height: 100px;
+      background-image: url('https://www.zenyze.com/wp-content/uploads/2023/01/zenyze-logo.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-bottom: 20px;
+    }
 
-        .header .right {
-            color: #00AEEF;
-        }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
 
-        .main-title {
-            text-align: center;
-        }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
 
-        .main-title h2 {
-            text-align: center;
-            margin: 0;
-            font-size: 1.2rem;
-            font-weight: 400;
-            letter-spacing: 0.2rem;
-        }
+    .form-group {
+      margin-bottom: 20px;
+    }
 
-        .main-title h1 {
-            margin: 0;
-            text-align: center;
-            font-size: 2rem;
-            font-weight: 700;
-            color: #008BCE;
-        }
+    .form-group label {
+      font-weight: bold;
+    }
 
-        .main-title .sub-title {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 10px;
-            font-size: 0.9rem;
-            font-weight: 700;
-        }
+    .form-group input[type="checkbox"] {
+      margin-right: 5px;
+    }
 
-        form {
-            display: flex;
-            flex-direction: column;
-        }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
 
-        form label {
-            margin: 10px 0 5px;
-            font-weight: 400;
-        }
+    .btn-cancel {
+      background-color: #ccc;
+    }
 
-        form input[type="text"], form input[type="email"], form textarea {
-            padding: 10px;
-            font-size: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        form .proficiency {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 10px;
-        }
-
-        form .proficiency label {
-            display: flex;
-            align-items: center;
-            font-size: 0.9rem;
-        }
-
-        form .proficiency label input {
-            margin-right: 5px;
-        }
-
-        form .buttons {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        form .buttons button {
-            padding: 10px 20px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 5px;
-        }
-
-        form .buttons .cancel {
-            background-color: #ccc;
-            color: #333;
-        }
-
-        form .buttons .submit {
-            background-color: #008BCE;
-            color: #fff;
-        }
-    </style>
+    .form-title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .form-title span {
+      color: #007bff;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <img src="logo.png" alt="Logo">
-            <div class="right">SOLUTIONS SIMPLIFIED</div>
-        </div> 
-        <div class="main-title">
-            <h2 style="width: 561px; height: 40px; left: 439px; top: 349px; text-align: center; color: black; font-size: 32px; font-family: Montserrat; font-weight: 400; letter-spacing: 43.20px; word-wrap: break-word"> BECOME A</h2>
-            <h1 style="width: 1294px; height: 107px; left: 73px; top: 392px; text-align: center; color: #016696; font-size: 96px; font-family: Montserrat; font-style: italic; font-weight: 900; word-wrap: break-word">FULL STACK DEVELOPER</h1>
-            <div class="sub-title">
-                <span style="left: 77px; top: 513px; text-align: center; color: black; font-size: 24px; font-family: Montserrat; font-weight: 800; text-transform: uppercase; word-wrap: break-word">1 V 1 TRAINING</span>
-                <span style="left: 424px; top: 513px; text-align: center; color: black; font-size: 24px; font-family: Montserrat; font-weight: 800; text-transform: uppercase; word-wrap: break-word">HANDS ON PROJECTS</span>
-                <span style="left: 876px; top: 513px; text-align: center; color: black; font-size: 24px; font-family: Montserrat; font-weight: 800; text-transform: uppercase; word-wrap: break-word">CERTIFICATION</span>
-                <span style="left: 1245px; top: 513px; text-align: center; color: black; font-size: 24px; font-family: Montserrat; font-weight: 800; text-transform: uppercase; word-wrap: break-word">60 DAYS</span>
-            </div>
-        </div>
-        <form id="submission-form">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Phone Number</label>
-            <input type="text" id="phone" name="phone" required>
-
-            <label for="university">University/College</label>
-            <input type="text" id="university" name="university" required>
-
-            <label for="degree">Degree Program/Field of Study</label>
-            <input type="text" id="degree" name="degree" required>
-
-            <label for="languages">Programming Languages Known</label>
-            <textarea id="languages" name="languages" rows="4" required></textarea>
-
-            <label>Proficiency Level in Each Programming Language</label>
-            <div class="proficiency">
-                <label><input type="checkbox" name="proficiency" value="beginner"> Beginner</label>
-                <label><input type="checkbox" name="proficiency" value="intermediate"> Intermediate</label>
-                <label><input type="checkbox" name="proficiency" value="advanced"> Advanced</label>
-            </div>
-
-            <div class="buttons">
-                <button type="reset" class="cancel">CANCEL</button>
-                <button type="submit" class="submit">SUBMIT</button>
-            </div>
-        </form>
-    </div>
+  <div class="container">
+    <div class="zenyze-logo"></div>
+    <h1 class="form-title">Become a <span>Full Stack Developer</span></h1>
+    <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="university">University/College:</label>
+        <input type="text" id="university" name="university" required>
+      </div>
+      <div class="form-group">
+        <label for="degree">Degree Program/Field of Study:</label>
+        <input type="text" id="degree" name="degree" required>
+      </div>
+      <div class="form-group">
+        <label for="languages">Programming Languages Known:</label>
+        <textarea id="languages" name="languages" required></textarea>
+      </div>
+      <div class="form-group">
+        <label>Proficiency Level in Each Programming Language:</label>
+        <input type="checkbox" id="beginner" name="proficiency" value="Beginner">
+        <label for="beginner">Beginner</label>
+        <input type="checkbox" id="intermediate" name="proficiency" value="Intermediate">
+        <label for="intermediate">Intermediate</label>
+        <input type="checkbox" id="advanced" name="proficiency" value="Advanced">
+        <label for="advanced">Advanced</label>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn">SUBMIT</button>
+        <button type="reset" class="btn btn-cancel">CANCEL</button>
+      </div>
+    </form>
+  </div>
 </body>
 </html>
