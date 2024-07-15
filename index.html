@@ -1,112 +1,170 @@
-<div style="width: 100%; height: 100%; position: relative; background: white">
-    <div style="width: 1378px; height: 88px; left: 32px; top: 39px; position: absolute; background: white; box-shadow: 0px 4px 20.299999237060547px -7px rgba(0, 0, 0, 0.50); border-radius: 11px"></div>
-    <div style="width: 236.86px; height: 58.69px; left: 55px; top: 54px; position: absolute">
-        <div style="width: 236.86px; left: -0px; top: 0px; position: absolute">
-            <div style="width: 170.56px; height: 29.99px; left: 66.30px; top: 15.78px; position: absolute">
-                <div style="width: 24.58px; height: 29.97px; left: 0px; top: 0px; position: absolute; background: #333333"></div>
-                <div style="width: 21.20px; height: 29.98px; left: 30.83px; top: 0px; position: absolute; background: #333333"></div>
-                <div style="width: 25.06px; height: 29.98px; left: 59.48px; top: 0px; position: absolute; background: #333333"></div>
-                <div style="width: 25.01px; height: 29.97px; left: 90.52px; top: 0px; position: absolute; background: #333333"></div>
-                <div style="width: 24.58px; height: 29.98px; left: 118.54px; top: 0px; position: absolute; background: #333333"></div>
-                <div style="width: 21.20px; height: 29.98px; left: 149.36px; top: 0.01px; position: absolute; background: #333333"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .header img {
+            max-height: 50px;
+        }
+
+        .header .right {
+            color: #00AEEF;
+        }
+
+        .main-title {
+            text-align: center;
+        }
+
+        .main-title h2 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 400;
+            letter-spacing: 0.2rem;
+        }
+
+        .main-title h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #008BCE;
+        }
+
+        .main-title .sub-title {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin: 10px 0 5px;
+            font-weight: 400;
+        }
+
+        form input[type="text"], form input[type="email"], form textarea {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form .proficiency {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        form .proficiency label {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        form .proficiency label input {
+            margin-right: 5px;
+        }
+
+        form .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        form .buttons button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+        }
+
+        form .buttons .cancel {
+            background-color: #ccc;
+            color: #333;
+        }
+
+        form .buttons .submit {
+            background-color: #008BCE;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo.png" alt="Logo">
+            <div class="right">SOLUTIONS SIMPLIFIED</div>
+        </div>
+        <div class="main-title">
+            <h2>BECOME A</h2>
+            <h1>FULL STACK DEVELOPER</h1>
+            <div class="sub-title">
+                <span>1 V 1 TRAINING</span>
+                <span>HANDS ON PROJECTS</span>
+                <span>CERTIFICATION</span>
+                <span>60 DAYS</span>
             </div>
-            <div style="width: 58.53px; height: 58.69px; left: 0px; top: 0px; position: absolute">
-                <div style="width: 58.53px; height: 58.69px; left: 0px; top: 0px; position: absolute">
-                    <div style="width: 58.53px; height: 58.69px; left: 0px; top: 0px; position: absolute; background: linear-gradient(219deg, #016696 68%, #221F1F 90%)"></div>
-                    <div style="width: 9.76px; height: 10.03px; left: 2.39px; top: 47.04px; position: absolute; background: linear-gradient(42deg, #016696 74%, #221F1F 100%)"></div>
-                </div>
-                <div style="width: 52.63px; height: 52.63px; left: 2.79px; top: 2.79px; position: absolute">
-                    <div style="width: 15.06px; height: 10.49px; left: 7.71px; top: 0.51px; position: absolute; background: linear-gradient(57deg, #221F1F 0%, #0096CA 12%)"></div>
-                    <div style="width: 16.15px; height: 5.50px; left: 21.26px; top: 0px; position: absolute; background: linear-gradient(318deg, #221F1F 0%, #0096CA 12%)"></div>
-                    <div style="width: 5.33px; height: 18.55px; left: 47.30px; top: 15.68px; position: absolute; background: linear-gradient(137deg, #221F1F 0%, #0096CA 12%)"></div>
-                    <div style="width: 9.26px; height: 11.08px; left: 42.14px; top: 33.18px; position: absolute; background: linear-gradient(29deg, #221F1F 0%, #0096CA 12%)"></div>
-                    <div style="width: 6.20px; height: 21.03px; left: 0px; top: 15.68px; position: absolute; background: linear-gradient(217deg, #221F1F 0%, #0096CA 12%)"></div>
-                    <div style="width: 34.74px; height: 17.14px; left: 2.16px; top: 35.49px; position: absolute; background: linear-gradient(222deg, #221F1F 0%, #0096CA 12%)"></div>
-                </div>
+        </div>
+        <form id="submission-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="university">University/College</label>
+            <input type="text" id="university" name="university" required>
+
+            <label for="degree">Degree Program/Field of Study</label>
+            <input type="text" id="degree" name="degree" required>
+
+            <label for="languages">Programming Languages Known</label>
+            <textarea id="languages" name="languages" rows="4" required></textarea>
+
+            <label>Proficiency Level in Each Programming Language</label>
+            <div class="proficiency">
+                <label><input type="checkbox" name="proficiency" value="beginner"> Beginner</label>
+                <label><input type="checkbox" name="proficiency" value="intermediate"> Intermediate</label>
+                <label><input type="checkbox" name="proficiency" value="advanced"> Advanced</label>
             </div>
-        </div>
+
+            <div class="buttons">
+                <button type="reset" class="cancel">CANCEL</button>
+                <button type="submit" class="submit">SUBMIT</button>
+            </div>
+        </form>
     </div>
-   
-    <div style="width: 1265px; height: 84px; left: 88px; top: 967px; position: absolute; background: #D9D9D9; border-radius: 5px"></div>
-    <div style="width: 1265px; height: 85px; left: 88px; top: 1150px; position: absolute; background: #D9D9D9; border-radius: 5px"></div>
-    <div style="width: 1265px; height: 84px; left: 88px; top: 1334px; position: absolute; background: #D9D9D9; border-radius: 5px"></div>
-    <div style="width: 1265px; height: 85px; left: 88px; top: 1517px; position: absolute; background: #D9D9D9; border-radius: 5px"></div>
-    <div style="width: 1265px; height: 121px; left: 88px; top: 1701px; position: absolute; background: #D9D9D9; border-radius: 5px"></div>
-    <div style="width: 324px; height: 80px; left: 310px; top: 2092px; position: absolute; background: #D9D9D9; border-radius: 5px"></div>
-    <div style="width: 324px; height: 80px; left: 745px; top: 2092px; position: absolute; background: #0096CA; border-radius: 5px"></div>
-<form>
-      <div class="form-group">
-        <label class="form-label" for="name">Name</label>
-        <input class="form-input" type="text" id="name" name="name" placeholder="Your Full Name">
-        <div style="width: 1265px; height: 85px; left: 88px; top: 783px; position: absolute; background: #D9D9D9; border-radius: 5px"></div> 
-      </div>
-   
-      <div class="form-group">
-        <label class="form-label" for="email">Email</label>
-        <input class="form-input" type="email" id="email" name="email" placeholder="Your Email Address">
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="phone">Phone Number</label>
-        <input class="form-input" type="tel" id="phone" name="phone" placeholder="Your Phone Number">
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="university">University/College</label>
-        <input class="form-input" type="text" id="university" name="university" placeholder="Your University/College Name">
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="degree">Degree Program/Field of Study</label>
-        <input class="form-input" type="text" id="degree" name="degree" placeholder="Your Degree Program/Field of Study">
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="languages">Programming Languages Known</label>
-        <input class="form-input" type="text" id="languages" name="languages" placeholder="List of Programming Languages">
-      </div>
-
-      <div class="form-group">
-        <label class="form-label">Proficiency Level in Each Programming Language</label>
-        <div class="form-checkbox">
-          <input type="checkbox" id="beginner" name="proficiency" value="Beginner">
-          <label for="beginner">Beginner</label>
-        </div>
-        <div class="form-checkbox">
-          <input type="checkbox" id="intermediate" name="proficiency" value="Intermediate">
-          <label for="intermediate">Intermediate</label>
-        </div>
-        <div class="form-checkbox">
-          <input type="checkbox" id="advanced" name="proficiency" value="Advanced">
-          <label for="advanced">Advanced</label>
-        </div>
-      </div>
-
-      <div class="buttons">
-        <button class="button cancel" type="button">CANCEL</button>
-        <button class="button submit" type="submit">SUBMIT</button>
-      </div>
-    </form> <div style="width: 179.96px; left: 88.21px; top: 1948.52px; position: absolute">
-        <div style="width: 30.20px; height: 30.20px; left: 0px; top: 2.42px; position: absolute; background: #D9D9D9; border-radius: 5px"></div>
-        <div style="width: 137.69px; height: 35.03px; left: 42.27px; top: 0px; position: absolute; color: #04B218; font-size: 24px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Beginner</div>
-    </div>
-    <div style="width: 235.52px; left: 597.91px; top: 1948.52px; position: absolute">
-        <div style="width: 30.20px; height: 30.20px; left: 0px; top: 2.42px; position: absolute; background: #D9D9D9; border-radius: 5px"></div>
-        <div style="width: 193.25px; height: 35.03px; left: 42.27px; top: 0px; position: absolute; color: #FFD500; font-size: 24px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Intermediate</div>
-    </div>
-    <div style="width: 190.84px; left: 1163.16px; top: 1950.93px; position: absolute">
-        <div style="width: 30.20px; height: 30.20px; left: 0px; top: 2.42px; position: absolute; background: #D9D9D9; border-radius: 5px"></div>
-        <div style="width: 148.56px; height: 35.03px; left: 42.27px; top: 0px; position: absolute; color: #FF0000; font-size: 24px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Advanced</div>
-    </div>
-    <div style="left: 1095px; top: 69px; position: absolute">
-        <span style="color: #1E1E1E; font-size: 24px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">SOLUTIONS</span>
-        <span style="color: black; font-size: 24px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"></span>
-        <span style="color: #0096CA; font-size: 24px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">SIMPLIFIED</span>
-    </div>
-    <div style="width: 561px; height: 40px; left: 439px; top: 349px; position: absolute; text-align: center; color: black; font-size: 32px; font-family: Montserrat; font-weight: 400; letter-spacing: 43.20px; word-wrap: break-word">BECOME A</div>
-    <div style="width: 1294px; height: 107px; left: 73px; top: 392px; position: absolute; text-align: center; color: #016696; font-size: 96px; font-family: Montserrat; font-style: italic; font-weight: 900; word-wrap: break-word">FULL STACK DEVELOPER</div>
-    <div style="left: 77px; top: 513px; position: absolute; text-align: center; color: black; font-size: 24px; font-family: Montserrat; font-weight: 800; text-transform: uppercase; word-wrap: break-word">1 v 1 Training</div>
-    <div style="left: 424px; top: 513px; position: absolute; text-align: center; color: black; font-size: 24px; font-family: Montserrat; font-weight: 800; text-transform: uppercase; word-wrap: break-word">HANDS ON PROJECTS</div>
-    <div style="left: 876px; top: 513px; position: absolute; text-align: center; color: black; font-size: 24px; font-family: Montserrat; font-weight: 800; text-transform: uppercase; word-wrap: break-word">CERTIFICATION</div>
-    <div style="left: 1245px; top: 513px; position: absolute; text-align: center; color: black; font-size: 24px; font-family: Montserrat; font-weight: 800; text-transform: uppercase; word-wrap: break-word">60 DAYS</div>
-</div>
+</body>
+</html>
